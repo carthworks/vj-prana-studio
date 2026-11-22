@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   description:
     "Explore specialised programs at VJ PRANA Salem: dedicated women-only yoga batches with a female instructor, pre-marriage counselling, post-marriage counselling, and individualised yoga psychology.",
   alternates: { canonical: "/special-programs" },
+  openGraph: {
+    title: "Women's Yoga & Pre/Post-Marriage Counselling in Salem | VJ PRANA",
+    description:
+      "Dedicated women-only yoga batches, pre-marriage counselling, post-marriage counselling, and individualised yoga psychology.",
+    url: "/special-programs",
+  },
 };
 
 export default function SpecialProgramsPage() {
@@ -21,6 +27,7 @@ export default function SpecialProgramsPage() {
         title="Thoughtful Programs for Women’s Wellbeing & Relationship Care"
         subtitle="Dedicated women-only yoga sessions alongside private, compassionate pre-marriage, post-marriage, and individualised yoga psychology counselling."
         breadcrumb="Special Programs"
+        canonicalPath="/special-programs"
       />
 
       <section className="bg-white py-16 sm:py-24">

@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   description:
     "Personalised diet plans, weight management nutrition, healthy weight gain, and lifestyle meal planning in Salem & online with Geetha Arunkumar (Ph.D., PGDFS New Zealand).",
   alternates: { canonical: "/nutrition" },
+  openGraph: {
+    title: "Personalised Diet & Nutrition Consultation in Salem | VJ PRANA",
+    description:
+      "Practical, sustainable meal planning and one-on-one nutrition consultation with Geetha Arunkumar (Ph.D., PGDFS New Zealand).",
+    url: "/nutrition",
+  },
 };
 
 const CONSULTATION_STEPS = [
@@ -45,6 +51,7 @@ export default function NutritionPage() {
         title="Eat Better. Feel Better. Live Better."
         subtitle="Healthy living starts with understanding your body and making better food choices. Our personalised nutrition consultation helps you build practical, sustainable eating habits aligned with your lifestyle and goals."
         breadcrumb="Nutrition"
+        canonicalPath="/nutrition"
       />
 
       {/* Services & Visual */}

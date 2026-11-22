@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { SITE_URL } from "@/lib/constants";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 interface PageBannerProps {
@@ -7,6 +8,7 @@ interface PageBannerProps {
   title: string;
   subtitle: string;
   breadcrumb: string;
+  canonicalPath?: string;
 }
 
 export function PageBanner({
@@ -14,9 +16,33 @@ export function PageBanner({
   title,
   subtitle,
   breadcrumb,
+  canonicalPath,
 }: PageBannerProps) {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: breadcrumb,
+        ...(canonicalPath ? { item: `${SITE_URL}${canonicalPath}` } : {}),
+      },
+    ],
+  };
+
   return (
     <section className="relative overflow-hidden border-b border-[#E4DED4] bg-[#F5F0E6] py-16 sm:py-22">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div
         className="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-[#CCA146]/12 blur-3xl"
         aria-hidden="true"

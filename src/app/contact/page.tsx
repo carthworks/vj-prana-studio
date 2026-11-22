@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   description:
     "Contact VJ PRANA Health & Wellness Studio in Sastha Nagar, Salem. Call 097917 85007 / 97902 38264, message on WhatsApp, or book an online or offline yoga & diet consultation.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact VJ PRANA Health & Wellness Studio, Salem",
+    description:
+      "Book a free yoga, fitness, or diet consultation online or at our studio in Sastha Nagar, Salem.",
+    url: "/contact",
+  },
 };
 
 interface ContactPageProps {
@@ -27,6 +33,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         title="Take the First Step Towards Better Living."
         subtitle="Visit our Salem wellness studio, call or WhatsApp our team, or send us your enquiry below to find the right yoga, fitness, nutrition, or counselling session."
         breadcrumb="Contact Us"
+        canonicalPath="/contact"
       />
       <Contact
         defaultProgram={params.program}

@@ -29,6 +29,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  applicationName: "VJ PRANA – Health & Wellness Studio",
   title: {
     default: "VJ PRANA | Yoga, Nutrition & Wellness Studio in Salem",
     template: "%s | VJ PRANA Salem",
@@ -47,6 +48,20 @@ export const metadata: Metadata = {
     "Foot reflexology Salem",
     "Pre-marriage counselling Salem",
   ],
+  authors: [{ name: "VJ PRANA Health & Wellness Studio" }],
+  creator: "VJ PRANA Health & Wellness Studio",
+  publisher: "VJ PRANA Health & Wellness Studio",
+  category: "Health & Wellness",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/icon.svg"],
+  },
   alternates: {
     canonical: "/",
   },
@@ -58,25 +73,23 @@ export const metadata: Metadata = {
     title: "VJ PRANA | Yoga, Nutrition & Wellness Studio in Salem",
     description:
       "Discover yoga, fitness, personalised nutrition, meditation and holistic wellness programs at VJ PRANA Health & Wellness Studio in Salem. Online and offline classes available.",
-    images: [
-      {
-        url: "/images/hero-wellness.jpg",
-        width: 1200,
-        height: 675,
-        alt: "VJ PRANA Health & Wellness Studio in Salem",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "VJ PRANA | Yoga, Nutrition & Wellness Studio in Salem",
     description:
       "Yoga, fitness, personalised nutrition, meditation, women's yoga & holistic wellness in Salem. Online & offline classes available.",
-    images: ["/images/hero-wellness.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

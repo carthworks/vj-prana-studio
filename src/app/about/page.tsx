@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   description:
     "Learn about VJ PRANA Health & Wellness Studio in Salem, our mindful wellness philosophy, and our experienced leadership team: Mr. Arun Kumar and Geetha Arunkumar.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About VJ PRANA – Holistic Yoga & Wellness Studio in Salem",
+    description:
+      "Meet Mr. Arun Kumar and Geetha Arunkumar and discover the mindful wellness philosophy behind VJ PRANA in Salem.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {
@@ -25,6 +31,7 @@ export default function AboutPage() {
         title="Wellness Is More Than Exercise. It’s a Way of Life."
         subtitle="Rooted in mindful movement, balanced nutrition, and genuine human care, VJ PRANA is a welcoming studio in Salem offering online and offline holistic wellness."
         breadcrumb="About Us"
+        canonicalPath="/about"
       />
 
       {/* Brand Story & Philosophy */}

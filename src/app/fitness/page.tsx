@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   description:
     "Build strength, flexibility, and balanced vitality at VJ PRANA Salem: strength training, power yoga, bodyweight cardio, weight management, and relaxation-focused foot reflexology.",
   alternates: { canonical: "/fitness" },
+  openGraph: {
+    title: "Strength, Power Yoga, Weight Management & Foot Reflexology | VJ PRANA",
+    description:
+      "Personalised strength conditioning, power yoga, healthy weight management, and foot reflexology in Salem & online.",
+    url: "/fitness",
+  },
 };
 
 const FITNESS_PROGRAMS = [
@@ -78,6 +84,7 @@ export default function FitnessPage() {
         title="Move With Strength. Recover With Calm."
         subtitle="Combining bodyweight conditioning, power yoga, healthy weight management, and foot reflexology for complete physical wellbeing."
         breadcrumb="Fitness & Wellness"
+        canonicalPath="/fitness"
       />
 
       <section className="bg-white py-16 sm:py-24">

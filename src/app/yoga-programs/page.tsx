@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   description:
     "Explore yoga classes in Salem and online at VJ PRANA: traditional & therapeutic yoga, pranayama & meditation, women-only yoga, kids aerial yoga, and gentle senior sessions.",
   alternates: { canonical: "/yoga-programs" },
+  openGraph: {
+    title: "Yoga Programs in Salem & Online | VJ PRANA",
+    description:
+      "Traditional yoga, therapeutic yoga, pranayama, meditation, kids aerial yoga, and women-only batches online and in Salem.",
+    url: "/yoga-programs",
+  },
 };
 
 const YOGA_TRACKS = [
@@ -97,6 +103,7 @@ export default function YogaProgramsPage() {
         title="Mindful Yoga Programs for Every Stage of Life"
         subtitle="Experience traditional yoga, therapeutic guidance, pranayama, meditation, kids wellness yoga, and women-only batches—available online and at our Salem studio."
         breadcrumb="Yoga Programs"
+        canonicalPath="/yoga-programs"
       />
 
       <section className="bg-white py-16 sm:py-24">

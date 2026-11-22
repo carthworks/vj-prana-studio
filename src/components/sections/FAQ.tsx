@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { FAQ_ITEMS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FaqStructuredData } from "@/components/seo/FaqStructuredData";
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -14,6 +15,7 @@ export function FAQ() {
       id="faq"
       className="border-t border-[#E4DED4] bg-[#F5F0E6]/45 py-20 sm:py-28"
     >
+      <FaqStructuredData />
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Frequently Asked Questions"
