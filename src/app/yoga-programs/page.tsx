@@ -1,24 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, Check } from "lucide-react";
+import { buildPageMetadata } from "@/lib/seo";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { LinkButton } from "@/components/ui/Button";
 import { ModesSection } from "@/components/sections/ModesSection";
 import { FAQ } from "@/components/sections/FAQ";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Yoga, Pranayama & Kids Aerial Yoga Classes",
   description:
     "Join personalised yoga classes in Salem & online (Mon–Fri, 1 hr 15 min, ₹3,000/month): traditional & therapeutic yoga, pranayama, meditation, women-only & kids aerial yoga.",
-  alternates: { canonical: "/yoga-programs" },
-  openGraph: {
-    title: "Yoga, Pranayama & Kids Aerial Yoga Classes | VJ PRANA Salem",
-    description:
-      "Traditional yoga, therapeutic yoga, pranayama, meditation, kids aerial yoga, and women-only batches online and in Salem.",
-    url: "/yoga-programs",
-  },
-};
+  path: "/yoga-programs",
+});
 
 const YOGA_TRACKS = [
   {

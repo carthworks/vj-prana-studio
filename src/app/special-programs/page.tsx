@@ -1,23 +1,18 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { ArrowRight, Check, Lock, MessageCircle } from "lucide-react";
-import { SPECIAL_PROGRAMS_LIST } from "@/lib/constants";
-import { buildWhatsAppUrl, cn } from "@/lib/utils";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { LinkButton } from "@/components/ui/Button";
+import { SPECIAL_PROGRAMS_LIST } from "@/lib/constants";
+import { buildPageMetadata } from "@/lib/seo";
+import { buildWhatsAppUrl, cn } from "@/lib/utils";
+import { ArrowRight, Check, Lock, MessageCircle } from "lucide-react";
+import type { Metadata } from "next";
+import Image from "next/image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Women's Yoga & Marriage Counselling",
   description:
     "Dedicated women-only yoga batches with a female instructor, pre-marriage counselling, post-marriage counselling, and individualised yoga psychology in Salem & online.",
-  alternates: { canonical: "/special-programs" },
-  openGraph: {
-    title: "Women's Yoga & Marriage Counselling | VJ PRANA Salem",
-    description:
-      "Dedicated women-only yoga batches, pre-marriage counselling, post-marriage counselling, and individualised yoga psychology.",
-    url: "/special-programs",
-  },
-};
+  path: "/special-programs",
+});
 
 export default function SpecialProgramsPage() {
   return (

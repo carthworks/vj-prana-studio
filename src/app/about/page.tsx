@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, Award, Check, Sparkles } from "lucide-react";
 import { TEAM_PROFILES } from "@/lib/constants";
+import { buildPageMetadata } from "@/lib/seo";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { LinkButton } from "@/components/ui/Button";
@@ -9,18 +10,12 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ModesSection } from "@/components/sections/ModesSection";
 import { Gallery } from "@/components/sections/Gallery";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "About Us – Holistic Yoga & Wellness Studio",
   description:
     "Learn about VJ PRANA Health & Wellness Studio in Salem, our movement, flexibility & endurance philosophy, and mentors Mr. Arun Kumar and Geetha Arunkumar.",
-  alternates: { canonical: "/about" },
-  openGraph: {
-    title: "About Us – Holistic Yoga & Wellness Studio | VJ PRANA Salem",
-    description:
-      "Meet Mr. Arun Kumar and Geetha Arunkumar and discover the mindful wellness philosophy behind VJ PRANA in Salem.",
-    url: "/about",
-  },
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   const { arun, geetha } = TEAM_PROFILES;

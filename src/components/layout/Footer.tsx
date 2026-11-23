@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { BUSINESS } from "@/lib/constants";
-import { buildWhatsAppUrl } from "@/lib/utils";
 import { Logo } from "@/components/ui/Logo";
 import { SocialPills } from "@/components/ui/SocialPills";
+import { BUSINESS } from "@/lib/constants";
+import { buildWhatsAppUrl } from "@/lib/utils";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import Link from "next/link";
 
 const EXPLORE_LINKS = [
   { label: "Home", href: "/" },

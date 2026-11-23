@@ -2,23 +2,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, Check } from "lucide-react";
 import { TEAM_PROFILES } from "@/lib/constants";
+import { buildPageMetadata } from "@/lib/seo";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { LinkButton } from "@/components/ui/Button";
 import { ModesSection } from "@/components/sections/ModesSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Fitness, Power Yoga & Foot Reflexology",
   description:
     "Build movement, flexibility & endurance at VJ PRANA Salem: strength training, power yoga, bodyweight cardio, weight management & relaxation-focused foot reflexology.",
-  alternates: { canonical: "/fitness" },
-  openGraph: {
-    title: "Fitness, Power Yoga & Foot Reflexology | VJ PRANA Salem",
-    description:
-      "Personalised strength conditioning, power yoga, healthy weight management, and foot reflexology in Salem & online.",
-    url: "/fitness",
-  },
-};
+  path: "/fitness",
+});
 
 const FITNESS_PROGRAMS = [
   {

@@ -1,20 +1,15 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import { PageBanner } from "@/components/layout/PageBanner";
 import { Contact } from "@/components/sections/Contact";
 import { FAQ } from "@/components/sections/FAQ";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Contact Us – Book a Free Consultation",
   description:
     "Contact VJ PRANA Health & Wellness Studio in Sastha Nagar, Salem. Call 097917 85007 / 97902 38264, chat on WhatsApp, or book an online or offline consultation.",
-  alternates: { canonical: "/contact" },
-  openGraph: {
-    title: "Contact Us – Book a Free Consultation | VJ PRANA Salem",
-    description:
-      "Book a free yoga, fitness, or diet consultation online or at our studio in Sastha Nagar, Salem.",
-    url: "/contact",
-  },
-};
+  path: "/contact",
+});
 
 interface ContactPageProps {
   searchParams: Promise<{
