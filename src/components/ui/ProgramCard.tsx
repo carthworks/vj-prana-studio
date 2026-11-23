@@ -93,9 +93,9 @@ export function ProgramCard({ program, featured = false }: ProgramCardProps) {
             href={program.href}
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#00052F] transition-colors hover:text-[#CF4520]"
           >
-            <span>Learn More</span>
+            <span>Explore {program.title}</span>
             <ArrowRight
-              className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+              className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5"
               aria-hidden="true"
             />
           </Link>
@@ -104,6 +104,7 @@ export function ProgramCard({ program, featured = false }: ProgramCardProps) {
             href={`/contact?program=${encodeURIComponent(program.title)}#enquiry-form`}
             size="sm"
             variant="primary"
+            aria-label={`Book a session for ${program.title}`}
           >
             Book a Session
           </LinkButton>

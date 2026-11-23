@@ -86,11 +86,12 @@ export function Audience() {
 
                   <Link
                     href={group.href}
+                    aria-label={`Explore wellness programs for ${group.title}`}
                     className="relative z-10 mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#00052F] transition-colors duration-200 hover:text-[#CF4520]"
                   >
-                    <span>Explore Programs</span>
+                    <span>Explore {group.accent} Programs</span>
                     <ArrowRight
-                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                      className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
                       aria-hidden="true"
                     />
                   </Link>

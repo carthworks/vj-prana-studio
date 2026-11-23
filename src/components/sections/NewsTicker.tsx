@@ -221,7 +221,7 @@ export function NewsTicker({ initialItems }: NewsTickerProps) {
                     external={activeItem.linkUrl.startsWith("http")}
                     onClick={() => setActiveItem(null)}
                   >
-                    <span>{activeItem.linkLabel || "Learn More"}</span>
+                    <span>{activeItem.linkLabel || `View ${activeItem.title}`}</span>
                     {activeItem.linkUrl.startsWith("http") ? (
                       <ExternalLink className="h-4 w-4" aria-hidden="true" />
                     ) : (
