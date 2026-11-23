@@ -25,10 +25,56 @@ export function StructuredData() {
         description:
           "Discover personalised yoga, movement, flexibility, endurance, nutrition, and holistic wellness programs at VJ PRANA Health & Wellness Studio in Salem. Weekday online classes (4:45 AM – 11:00 AM & 5:00 PM – 8:00 PM, 1 hr 15 min Mon–Fri, ₹3,000/month) and offline Salem studio sessions available.",
         priceRange: "₹3,000/month",
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+            ],
+            opens: "04:45",
+            closes: "11:00",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+            ],
+            opens: "17:00",
+            closes: "20:00",
+          },
+        ],
+        knowsAbout: [
+          "Yoga",
+          "Therapeutic Yoga",
+          "Pranayama",
+          "Meditation",
+          "Personalised Nutrition Consultation",
+          "Diet Planning",
+          "Women-Only Yoga",
+          "Kids Aerial Yoga",
+          "Weight Management",
+          "Foot Reflexology",
+          "Pre-Marriage Counselling",
+          "Post-Marriage Counselling",
+        ],
+        founder: {
+          "@type": "Person",
+          name: TEAM_PROFILES.arun.name,
+          jobTitle: TEAM_PROFILES.arun.role,
+        },
         url: SITE_URL,
         sameAs: BUSINESS.socials.map((s) => s.url),
         logo: `${SITE_URL}/icon.svg`,
         image: [
+          `${SITE_URL}/images/vj-prana-poster.jpg`,
           `${SITE_URL}/images/hero-wellness.jpg`,
           `${SITE_URL}/images/prana01.jpg`,
           `${SITE_URL}/images/nutricion.jpg`,
@@ -83,9 +129,13 @@ export function StructuredData() {
           itemListElement: [
             {
               "@type": "Offer",
+              price: "3000",
+              priceCurrency: "INR",
+              description:
+                "Personalised weekday online classes (1 hr 15 min daily, Monday to Friday, morning 4:45 AM – 11:00 AM & evening 5:00 PM – 8:00 PM).",
               itemOffered: {
                 "@type": "Service",
-                name: "Yoga & Therapeutic Yoga",
+                name: "Yoga & Therapeutic Yoga (Online & Studio)",
                 url: `${SITE_URL}/yoga-programs`,
               },
             },

@@ -7,12 +7,12 @@ import { PageBanner } from "@/components/layout/PageBanner";
 import { LinkButton } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Special Programs – Women's Yoga & Marriage Counselling in Salem",
+  title: "Women's Yoga & Marriage Counselling",
   description:
-    "Explore specialised programs at VJ PRANA Salem: dedicated women-only yoga batches with a female instructor, pre-marriage counselling, post-marriage counselling, and individualised yoga psychology.",
+    "Dedicated women-only yoga batches with a female instructor, pre-marriage counselling, post-marriage counselling, and individualised yoga psychology in Salem & online.",
   alternates: { canonical: "/special-programs" },
   openGraph: {
-    title: "Women's Yoga & Pre/Post-Marriage Counselling in Salem | VJ PRANA",
+    title: "Women's Yoga & Marriage Counselling | VJ PRANA Salem",
     description:
       "Dedicated women-only yoga batches, pre-marriage counselling, post-marriage counselling, and individualised yoga psychology.",
     url: "/special-programs",

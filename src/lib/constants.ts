@@ -1,6 +1,6 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://vjpranastudio.com";
+  "https://vj-prana-studio.vercel.app";
 
 export const BUSINESS = {
   name: "VJ PRANA",
@@ -27,6 +27,12 @@ export const BUSINESS = {
   whatsappNumber: "919791785007",
   whatsappDefaultMessage:
     "Hello VJ PRANA, I would like to know more about your yoga and wellness programs. Please share the details.",
+  whatsappCommunityUrl:
+    process.env.NEXT_PUBLIC_WHATSAPP_COMMUNITY_URL?.trim() ||
+    "https://wa.me/919791785007?text=" +
+      encodeURIComponent(
+        "Namaste VJ PRANA! I would like to join the VJ PRANA WhatsApp Wellness Community group. Please share the invite link."
+      ),
   email: "hello@vjpranastudio.com",
   mapsQuery:
     "VJ PRANA Health and Wellness Studio Sastha Nagar Near Iyyapan Koil Bangalore Bypass Road Salem Tamil Nadu 636005",
@@ -194,7 +200,8 @@ export interface AudienceCardItem {
   points: string[];
   accent: string;
   href: string;
-  image?: string;
+  image: string;
+  poseIcon: string;
 }
 
 export const AUDIENCE_GROUPS: AudienceCardItem[] = [
@@ -210,7 +217,8 @@ export const AUDIENCE_GROUPS: AudienceCardItem[] = [
     ],
     accent: "Kids & Youth",
     href: "/yoga-programs#kids-yoga",
-    image: "/images/hanging.jpg",
+    image: "/images/hanging02.jpg",
+    poseIcon: "/images/yoga-poses/icon-benefit-item-1.svg",
   },
   {
     id: "adults-professionals",
@@ -224,6 +232,8 @@ export const AUDIENCE_GROUPS: AudienceCardItem[] = [
     ],
     accent: "Everyday Balance",
     href: "/yoga-programs",
+    image: "/images/prana01.jpg",
+    poseIcon: "/images/yoga-poses/icon-benefit-item-2.svg",
   },
   {
     id: "seniors-older-adults",
@@ -237,6 +247,8 @@ export const AUDIENCE_GROUPS: AudienceCardItem[] = [
     ],
     accent: "Gentle Care",
     href: "/yoga-programs#seniors-yoga",
+    image: "/images/meditation-breath.jpg",
+    poseIcon: "/images/yoga-poses/icon-benefit-item-3.svg",
   },
   {
     id: "wellness-enthusiasts",
@@ -250,6 +262,8 @@ export const AUDIENCE_GROUPS: AudienceCardItem[] = [
     ],
     accent: "Active Practice",
     href: "/fitness",
+    image: "/images/runners.jpg",
+    poseIcon: "/images/yoga-poses/icon-benefit-item-4.svg",
   },
 ];
 
@@ -264,6 +278,7 @@ export interface WellnessProgram {
   href: string;
   category: string;
   featured?: boolean;
+  poseIcon?: string;
 }
 
 export const WELLNESS_PROGRAMS: WellnessProgram[] = [
@@ -285,6 +300,7 @@ export const WELLNESS_PROGRAMS: WellnessProgram[] = [
     href: "/yoga-programs",
     category: "Core Practice",
     featured: true,
+    poseIcon: "/images/yoga-poses/icon-service-item-1.svg",
   },
   {
     id: "pranayama-meditation",
@@ -303,6 +319,7 @@ export const WELLNESS_PROGRAMS: WellnessProgram[] = [
     imageFit: "cover",
     href: "/yoga-programs#pranayama",
     category: "Breath & Mind",
+    poseIcon: "/images/yoga-poses/icon-service-item-2.svg",
   },
   {
     id: "strength-fitness",
@@ -321,6 +338,7 @@ export const WELLNESS_PROGRAMS: WellnessProgram[] = [
     imageFit: "contain",
     href: "/fitness",
     category: "Movement",
+    poseIcon: "/images/yoga-poses/icon-service-item-3.svg",
   },
   {
     id: "weight-management",
@@ -339,6 +357,7 @@ export const WELLNESS_PROGRAMS: WellnessProgram[] = [
     imageFit: "cover",
     href: "/fitness#weight-management",
     category: "Holistic Balance",
+    poseIcon: "/images/yoga-poses/icon-service-item-4.svg",
   },
   {
     id: "women-only-yoga",
@@ -358,6 +377,7 @@ export const WELLNESS_PROGRAMS: WellnessProgram[] = [
     href: "/special-programs#womens-yoga",
     category: "Women's Wellness",
     featured: true,
+    poseIcon: "/images/yoga-poses/icon-benefit-item-2.svg",
   },
   {
     id: "foot-reflexology",
@@ -376,6 +396,7 @@ export const WELLNESS_PROGRAMS: WellnessProgram[] = [
     imageFit: "contain",
     href: "/fitness#foot-reflexology",
     category: "Restorative Care",
+    poseIcon: "/images/yoga-poses/icon-benefit-item-3.svg",
   },
 ];
 
@@ -576,6 +597,17 @@ export interface GalleryAsset {
 }
 
 export const GALLERY_ITEMS: GalleryAsset[] = [
+  {
+    id: "vj-prana-official-poster",
+    src: "/images/vj-prana-poster.jpg",
+    title: "VJ PRANA – Breathe Better. Move Better. Live Better.",
+    caption:
+      "Holistic wellness for every age, every body, and every journey — Yoga, Pranayama, Fitness, Personalised Diet, Women's Yoga, Foot Reflexology & Counselling.",
+    alt: "VJ PRANA Health and Wellness Studio Salem official overview poster featuring yoga, pranayama, fitness, personalised nutrition, women's yoga, foot reflexology, and online and offline classes",
+    category: "Programs",
+    fit: "contain",
+    aspect: "portrait",
+  },
   {
     id: "studio-guided-yoga",
     src: "/images/prana01.jpg",

@@ -47,8 +47,24 @@ export function ProgramCard({ program, featured = false }: ProgramCardProps) {
         </span>
       </div>
 
-      <div className="flex flex-1 flex-col justify-between p-6 sm:p-7">
-        <div>
+      <div className="relative flex flex-1 flex-col justify-between overflow-hidden p-6 sm:p-7">
+        {/* Mild yoga-pose SVG watermark from /images/yoga-poses */}
+        {program.poseIcon && (
+          <div
+            className="pointer-events-none absolute right-4 bottom-16 z-0 h-24 w-24 opacity-[0.06] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-105 group-hover:opacity-[0.13]"
+            aria-hidden="true"
+          >
+            <Image
+              src={program.poseIcon}
+              alt=""
+              width={96}
+              height={96}
+              className="h-full w-full object-contain"
+            />
+          </div>
+        )}
+
+        <div className="relative z-10">
           <h3 className="font-editorial text-2xl font-medium text-[#00052F] transition-colors group-hover:text-[#CF4520]">
             {program.title}
           </h3>
@@ -72,7 +88,7 @@ export function ProgramCard({ program, featured = false }: ProgramCardProps) {
           </ul>
         </div>
 
-        <div className="mt-7 flex flex-wrap items-center justify-between gap-3 border-t border-[#E4DED4]/80 pt-5">
+        <div className="relative z-10 mt-7 flex flex-wrap items-center justify-between gap-3 border-t border-[#E4DED4]/80 pt-5">
           <Link
             href={program.href}
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#00052F] transition-colors hover:text-[#CF4520]"

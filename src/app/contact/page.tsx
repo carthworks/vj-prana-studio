@@ -4,12 +4,12 @@ import { Contact } from "@/components/sections/Contact";
 import { FAQ } from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
-  title: "Contact Us – Book a Free Consultation in Salem",
+  title: "Contact Us – Book a Free Consultation",
   description:
-    "Contact VJ PRANA Health & Wellness Studio in Sastha Nagar, Salem. Call 097917 85007 / 97902 38264, message on WhatsApp, or book an online or offline yoga & diet consultation.",
+    "Contact VJ PRANA Health & Wellness Studio in Sastha Nagar, Salem. Call 097917 85007 / 97902 38264, chat on WhatsApp, or book an online or offline consultation.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact VJ PRANA Health & Wellness Studio, Salem",
+    title: "Contact Us – Book a Free Consultation | VJ PRANA Salem",
     description:
       "Book a free yoga, fitness, or diet consultation online or at our studio in Sastha Nagar, Salem.",
     url: "/contact",

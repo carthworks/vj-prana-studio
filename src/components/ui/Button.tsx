@@ -7,17 +7,17 @@ type ButtonSize = "sm" | "md" | "lg";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-[#CF4520] text-white hover:bg-[#B13716] shadow-sm hover:shadow-md border border-transparent",
+    "bg-[#CF4520] text-white hover:bg-[#B13716] shadow-sm hover:shadow-[0_12px_26px_-10px_rgba(207,69,32,0.5)] border border-transparent",
   navy:
-    "bg-[#00052F] text-white hover:bg-[#11184d] shadow-sm hover:shadow-md border border-transparent",
+    "bg-[#00052F] text-white hover:bg-[#11184d] shadow-sm hover:shadow-[0_12px_26px_-10px_rgba(0,5,47,0.45)] border border-transparent",
   outline:
-    "bg-transparent text-[#28231E] border border-[#28231E]/25 hover:border-[#CF4520] hover:text-[#CF4520] hover:bg-[#F5F0E6]/60",
+    "bg-white/60 text-[#28231E] border border-[#28231E]/25 hover:border-[#CF4520] hover:text-[#CF4520] hover:bg-[#F5F0E6]/80 hover:shadow-sm",
   outlineLight:
-    "bg-transparent text-white border border-white/35 hover:border-[#CCA146] hover:bg-white/10",
+    "bg-transparent text-white border border-white/35 hover:border-[#CCA146] hover:bg-white/12 hover:shadow-[0_10px_24px_-10px_rgba(204,161,70,0.35)]",
   ghost:
     "bg-transparent text-[#CF4520] hover:bg-[#F5F0E6] border border-transparent",
   whatsapp:
-    "bg-[#1F7A4D] text-white hover:bg-[#17623D] shadow-sm hover:shadow-md border border-transparent",
+    "bg-[#1F7A4D] text-white hover:bg-[#17623D] shadow-sm hover:shadow-[0_12px_26px_-10px_rgba(31,122,77,0.5)] border border-transparent",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -27,7 +27,7 @@ const sizeStyles: Record<ButtonSize, string> = {
 };
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-wide transition-all duration-200 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed";
+  "group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full font-medium tracking-wide transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:scale-110 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;

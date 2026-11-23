@@ -10,12 +10,12 @@ import { ModesSection } from "@/components/sections/ModesSection";
 import { Gallery } from "@/components/sections/Gallery";
 
 export const metadata: Metadata = {
-  title: "About Us – Holistic Yoga & Wellness Studio in Salem",
+  title: "About Us – Holistic Yoga & Wellness Studio",
   description:
-    "Learn about VJ PRANA Health & Wellness Studio in Salem, our mindful wellness philosophy, and our experienced leadership team: Mr. Arun Kumar and Geetha Arunkumar.",
+    "Learn about VJ PRANA Health & Wellness Studio in Salem, our movement, flexibility & endurance philosophy, and mentors Mr. Arun Kumar and Geetha Arunkumar.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About VJ PRANA – Holistic Yoga & Wellness Studio in Salem",
+    title: "About Us – Holistic Yoga & Wellness Studio | VJ PRANA Salem",
     description:
       "Meet Mr. Arun Kumar and Geetha Arunkumar and discover the mindful wellness philosophy behind VJ PRANA in Salem.",
     url: "/about",

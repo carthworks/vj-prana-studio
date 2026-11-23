@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 import { buildWhatsAppUrl } from "@/lib/utils";
 import { Logo } from "@/components/ui/Logo";
+import { SocialPills } from "@/components/ui/SocialPills";
 
 const EXPLORE_LINKS = [
   { label: "Home", href: "/" },
@@ -37,33 +38,19 @@ export function Footer() {
               &ldquo;{BUSINESS.tagline}&rdquo;
             </p>
 
-            {/* Social Connect */}
-            <div className="mt-6 flex flex-wrap items-center gap-2.5">
-              {BUSINESS.socials.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Follow VJ PRANA on ${social.name}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3.5 py-2 text-xs font-medium text-[#F5F0E6] transition-colors hover:border-[#CCA146] hover:bg-white/10 hover:text-[#CCA146]"
-                >
-                  {social.name === "Instagram" ? (
-                    <Instagram className="h-4 w-4" aria-hidden="true" />
-                  ) : (
-                    <Facebook className="h-4 w-4" aria-hidden="true" />
-                  )}
-                  <span>{social.name}</span>
-                </a>
-              ))}
-            </div>
+            {/* Follow Our Journey – Instagram, Facebook & YouTube */}
+            <SocialPills
+              heading="Follow Our Journey"
+              theme="dark"
+              className="mt-6"
+            />
           </div>
 
           {/* Column 2: Explore */}
           <div className="lg:col-span-2">
-            <h2 className="font-editorial text-lg font-medium text-white">
+            <p className="font-editorial text-lg font-medium text-white">
               Explore
-            </h2>
+            </p>
             <ul className="mt-4 space-y-2.5 text-sm">
               {EXPLORE_LINKS.map((item) => (
                 <li key={item.href}>
@@ -80,9 +67,9 @@ export function Footer() {
 
           {/* Column 3: Programs */}
           <div className="lg:col-span-3">
-            <h2 className="font-editorial text-lg font-medium text-white">
+            <p className="font-editorial text-lg font-medium text-white">
               Programs
-            </h2>
+            </p>
             <ul className="mt-4 space-y-2.5 text-sm">
               {PROGRAM_LINKS.map((item) => (
                 <li key={item.href}>
@@ -99,9 +86,9 @@ export function Footer() {
 
           {/* Column 4: Contact */}
           <div className="lg:col-span-3">
-            <h2 className="font-editorial text-lg font-medium text-white">
+            <p className="font-editorial text-lg font-medium text-white">
               Contact
-            </h2>
+            </p>
             <ul className="mt-4 space-y-3.5 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin

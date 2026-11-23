@@ -1,4 +1,5 @@
-import { ArrowRight, Globe, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Globe, MapPin, MessageCircle, Sparkles } from "lucide-react";
+import { BUSINESS } from "@/lib/constants";
 import { LinkButton } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/MotionPrimitives";
 import { HeroSlider } from "./HeroSlider";
@@ -21,29 +22,46 @@ export function Hero() {
           {/* Editorial Text Column */}
           <div className="lg:col-span-6">
             <FadeIn>
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-[#CCA146]/45 bg-white/85 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] text-[#8C6A1F] uppercase backdrop-blur-xs">
+              <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-[#CCA146]/50 bg-white/90 px-4 py-1.5 text-xs font-semibold tracking-[0.12em] text-[#8C6A1F] shadow-2xs backdrop-blur-xs">
                 <Sparkles className="h-3.5 w-3.5 text-[#CF4520]" aria-hidden="true" />
-                <span>VJ PRANA &middot; Salem, Tamil Nadu</span>
+                <span className="text-[#CF4520]">Namaste | வணக்கம்</span>
+                <span className="text-[#DBD4C6]" aria-hidden="true">&bull;</span>
+                <span className="uppercase tracking-[0.16em]">
+                  VJ PRANA &middot; Salem
+                </span>
               </div>
 
-              <h1 className="font-editorial mt-6 text-4xl font-medium leading-[1.12] tracking-tight text-[#00052F] sm:text-5xl lg:text-[3.55rem]">
+              <h1 className="font-editorial mt-5 text-4xl font-medium leading-[1.12] tracking-tight text-[#00052F] sm:text-5xl lg:text-[3.5rem]">
                 Discover a Healthier, Stronger &amp; More Balanced You.
               </h1>
 
               <p className="mt-5 max-w-xl text-base leading-relaxed text-[#676055] sm:text-lg">
+                <span className="font-medium text-[#00052F]">
+                  Namaste | வணக்கம் —
+                </span>{" "}
                 At VJ PRANA, we educate you on the simple, everyday power of
                 movement, flexibility, and endurance—combining personalised
                 yoga, mindful fitness, and nutrition to help you lead a happy,
                 healthy lifestyle on a regular basis.
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-3.5">
                 <LinkButton href="#programs" size="lg" variant="primary">
                   <span>Explore Our Programs</span>
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </LinkButton>
 
-                <LinkButton href="/contact" size="lg" variant="outline">
+                <LinkButton
+                  href={BUSINESS.whatsappCommunityUrl}
+                  size="lg"
+                  variant="whatsapp"
+                  external
+                >
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                  <span>Join WhatsApp Community</span>
+                </LinkButton>
+
+                <LinkButton href="/contact" size="md" variant="outline">
                   Talk to Our Wellness Team
                 </LinkButton>
               </div>

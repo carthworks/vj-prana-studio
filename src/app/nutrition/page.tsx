@@ -8,12 +8,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { LinkButton } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Nutrition & Diet Consultation in Salem – Geetha Arunkumar",
+  title: "Diet & Nutrition Consultation – Geetha Arunkumar",
   description:
-    "Personalised diet plans, weight management nutrition, healthy weight gain, and lifestyle meal planning in Salem & online with Geetha Arunkumar (Ph.D., PGDFS New Zealand).",
+    "Personalised diet plans, weight management nutrition, and lifestyle meal planning in Salem & online with Geetha Arunkumar (Ph.D., PGDFS New Zealand).",
   alternates: { canonical: "/nutrition" },
   openGraph: {
-    title: "Personalised Diet & Nutrition Consultation in Salem | VJ PRANA",
+    title: "Diet & Nutrition Consultation – Geetha Arunkumar | VJ PRANA Salem",
     description:
       "Practical, sustainable meal planning and one-on-one nutrition consultation with Geetha Arunkumar (Ph.D., PGDFS New Zealand).",
     url: "/nutrition",

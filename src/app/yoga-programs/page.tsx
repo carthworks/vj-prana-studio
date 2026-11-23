@@ -8,12 +8,12 @@ import { FAQ } from "@/components/sections/FAQ";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Yoga Programs – Traditional, Therapeutic, Pranayama & Kids Yoga",
+  title: "Yoga, Pranayama & Kids Aerial Yoga Classes",
   description:
-    "Explore yoga classes in Salem and online at VJ PRANA: traditional & therapeutic yoga, pranayama & meditation, women-only yoga, kids aerial yoga, and gentle senior sessions.",
+    "Join personalised yoga classes in Salem & online (Mon–Fri, 1 hr 15 min, ₹3,000/month): traditional & therapeutic yoga, pranayama, meditation, women-only & kids aerial yoga.",
   alternates: { canonical: "/yoga-programs" },
   openGraph: {
-    title: "Yoga Programs in Salem & Online | VJ PRANA",
+    title: "Yoga, Pranayama & Kids Aerial Yoga Classes | VJ PRANA Salem",
     description:
       "Traditional yoga, therapeutic yoga, pranayama, meditation, kids aerial yoga, and women-only batches online and in Salem.",
     url: "/yoga-programs",

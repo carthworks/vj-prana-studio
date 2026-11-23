@@ -68,6 +68,7 @@ export interface NewsItem extends NewsItemInput {
 }
 
 export const NEWS_PRESET_IMAGES = [
+  { label: "Official Poster", path: "/images/vj-prana-poster.jpg" },
   { label: "Studio Yoga", path: "/images/prana01.jpg" },
   { label: "Yoga Day Event", path: "/images/events01.jpeg" },
   { label: "Kids Aerial Yoga", path: "/images/hanging02.jpg" },

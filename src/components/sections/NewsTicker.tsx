@@ -183,7 +183,7 @@ export function NewsTicker({ initialItems }: NewsTickerProps) {
               <img
                 src={activeItem.image}
                 alt={activeItem.title}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
               <button
                 type="button"

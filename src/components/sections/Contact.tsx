@@ -1,7 +1,5 @@
 import {
   ExternalLink,
-  Facebook,
-  Instagram,
   Mail,
   MapPin,
   MessageCircle,
@@ -11,6 +9,7 @@ import { BUSINESS } from "@/lib/constants";
 import { buildWhatsAppUrl } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { LinkButton } from "@/components/ui/Button";
+import { SocialPills } from "@/components/ui/SocialPills";
 import { ContactForm } from "./ContactForm";
 
 interface ContactProps {
@@ -117,40 +116,29 @@ export function Contact({
                 </div>
               </div>
 
-              <div className="mt-7 space-y-4 border-t border-[#E4DED4] pt-6">
-                <LinkButton
-                  href={buildWhatsAppUrl()}
-                  variant="whatsapp"
-                  external
-                  className="w-full"
-                >
-                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                  <span>Chat on WhatsApp (+91 97917 85007)</span>
-                </LinkButton>
-
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8C6A1F]">
-                    Connect on Social Media
-                  </p>
-                  <div className="mt-2.5 flex flex-wrap gap-2.5">
-                    {BUSINESS.socials.map((social) => (
-                      <a
-                        key={social.name}
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full border border-[#E4DED4] bg-white px-4 py-2 text-xs font-semibold text-[#00052F] transition-colors hover:border-[#CF4520] hover:text-[#CF4520]"
-                      >
-                        {social.name === "Instagram" ? (
-                          <Instagram className="h-4 w-4 text-[#CF4520]" aria-hidden="true" />
-                        ) : (
-                          <Facebook className="h-4 w-4 text-[#CF4520]" aria-hidden="true" />
-                        )}
-                        <span>{social.name}</span>
-                      </a>
-                    ))}
-                  </div>
+              <div className="mt-7 space-y-5 border-t border-[#E4DED4] pt-6">
+                <div className="flex flex-col gap-2.5 sm:flex-row">
+                  <LinkButton
+                    href={buildWhatsAppUrl()}
+                    variant="whatsapp"
+                    external
+                    className="flex-1"
+                  >
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                    <span>WhatsApp Chat</span>
+                  </LinkButton>
+                  <LinkButton
+                    href={BUSINESS.whatsappCommunityUrl}
+                    variant="outline"
+                    external
+                    className="flex-1"
+                  >
+                    <MessageCircle className="h-4 w-4 text-[#1F7A4D]" aria-hidden="true" />
+                    <span>Join Community</span>
+                  </LinkButton>
                 </div>
+
+                <SocialPills heading="Follow Our Journey" theme="light" />
               </div>
             </div>
 

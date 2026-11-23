@@ -8,12 +8,12 @@ import { LinkButton } from "@/components/ui/Button";
 import { ModesSection } from "@/components/sections/ModesSection";
 
 export const metadata: Metadata = {
-  title: "Fitness, Weight Management & Foot Reflexology in Salem",
+  title: "Fitness, Power Yoga & Foot Reflexology",
   description:
-    "Build strength, flexibility, and balanced vitality at VJ PRANA Salem: strength training, power yoga, bodyweight cardio, weight management, and relaxation-focused foot reflexology.",
+    "Build movement, flexibility & endurance at VJ PRANA Salem: strength training, power yoga, bodyweight cardio, weight management & relaxation-focused foot reflexology.",
   alternates: { canonical: "/fitness" },
   openGraph: {
-    title: "Strength, Power Yoga, Weight Management & Foot Reflexology | VJ PRANA",
+    title: "Fitness, Power Yoga & Foot Reflexology | VJ PRANA Salem",
     description:
       "Personalised strength conditioning, power yoga, healthy weight management, and foot reflexology in Salem & online.",
     url: "/fitness",
