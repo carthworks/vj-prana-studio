@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 import { buildWhatsAppUrl } from "@/lib/utils";
 import { Logo } from "@/components/ui/Logo";
@@ -36,6 +36,27 @@ export function Footer() {
             <p className="font-editorial mt-5 text-base italic text-[#CCA146]">
               &ldquo;{BUSINESS.tagline}&rdquo;
             </p>
+
+            {/* Social Connect */}
+            <div className="mt-6 flex flex-wrap items-center gap-2.5">
+              {BUSINESS.socials.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Follow VJ PRANA on ${social.name}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3.5 py-2 text-xs font-medium text-[#F5F0E6] transition-colors hover:border-[#CCA146] hover:bg-white/10 hover:text-[#CCA146]"
+                >
+                  {social.name === "Instagram" ? (
+                    <Instagram className="h-4 w-4" aria-hidden="true" />
+                  ) : (
+                    <Facebook className="h-4 w-4" aria-hidden="true" />
+                  )}
+                  <span>{social.name}</span>
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Column 2: Explore */}

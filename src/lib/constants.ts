@@ -34,6 +34,18 @@ export const BUSINESS = {
     "https://www.google.com/maps/search/?api=1&query=Sastha+Nagar+Near+Iyyapan+Koil+Bangalore+Bypass+Road+Salem+Tamil+Nadu+636005",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Sastha+Nagar,+Near+Iyyapan+Koil,+Bangalore+Bypass+Road,+Salem,+Tamil+Nadu+636005&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  socials: [
+    {
+      name: "Instagram",
+      handle: "@vjprana",
+      url: "https://www.instagram.com/vjprana/",
+    },
+    {
+      name: "Facebook",
+      handle: "VJ PRANA (Arun Kumar)",
+      url: "https://www.facebook.com/arun.kumar.772423",
+    },
+  ],
 } as const;
 
 export interface NavItem {

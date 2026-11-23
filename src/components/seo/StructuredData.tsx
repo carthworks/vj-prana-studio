@@ -26,6 +26,7 @@ export function StructuredData() {
           "Discover personalised yoga, movement, flexibility, endurance, nutrition, and holistic wellness programs at VJ PRANA Health & Wellness Studio in Salem. Weekday online classes (4:45 AM – 11:00 AM & 5:00 PM – 8:00 PM, 1 hr 15 min Mon–Fri, ₹3,000/month) and offline Salem studio sessions available.",
         priceRange: "₹3,000/month",
         url: SITE_URL,
+        sameAs: BUSINESS.socials.map((s) => s.url),
         logo: `${SITE_URL}/icon.svg`,
         image: [
           `${SITE_URL}/images/hero-wellness.jpg`,

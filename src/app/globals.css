@@ -101,3 +101,31 @@ h4,
 .hairline-gold {
   background: linear-gradient(90deg, transparent, var(--highlight), transparent);
 }
+
+/* Smooth News & Events Ticker marquee */
+@keyframes vj-ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.vj-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: vj-ticker-scroll 38s linear infinite;
+}
+
+.vj-ticker-viewport:hover .vj-ticker-track,
+.vj-ticker-viewport:focus-within .vj-ticker-track,
+.vj-ticker-paused {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vj-ticker-track {
+    animation: none !important;
+  }
+}

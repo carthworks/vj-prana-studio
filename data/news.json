@@ -1,0 +1,51 @@
+[
+  {
+    "id": "weekday-online-batches",
+    "title": "Personalised Weekday Online Classes Open (Mon–Fri · ₹3,000/mo)",
+    "category": "New Batch",
+    "date": "Morning 4:45–11 AM · Evening 5–8 PM",
+    "summary": "Join our 1 hr 15 min daily personalised weekday programs focused on movement, flexibility, and endurance. No weekend classes.",
+    "image": "/images/prana01.jpg",
+    "linkUrl": "/contact?mode=Online#enquiry-form",
+    "linkLabel": "Reserve Your Slot",
+    "active": true,
+    "createdAt": "2026-11-20T06:00:00.000Z"
+  },
+  {
+    "id": "international-yoga-day-salem",
+    "title": "International Yoga Day Community Workshop in Salem",
+    "category": "Event",
+    "date": "In Association with Techno Sport",
+    "summary": "Experience strengthening yoga poses and guided relaxation led by Mr. Arun Kumar and Geetha Arunkumar.",
+    "image": "/images/events01.jpeg",
+    "linkUrl": "/about",
+    "linkLabel": "View Community Highlights",
+    "active": false,
+    "createdAt": "2026-11-19T06:00:00.000Z",
+    "updatedAt": "2026-11-23T00:49:40.182Z"
+  },
+  {
+    "id": "diet-consultation-slots",
+    "title": "One-on-One Diet & Nutrition Consultations with Geetha Arunkumar",
+    "category": "Announcement",
+    "date": "Online & Salem Studio",
+    "summary": "Personalised meal planning and sustainable food habit guidance by Geetha Arunkumar (Ph.D., PGDFS New Zealand).",
+    "image": "/images/geetha-arunkumar.jpg",
+    "linkUrl": "/nutrition",
+    "linkLabel": "Book Diet Consultation",
+    "active": true,
+    "createdAt": "2026-11-18T06:00:00.000Z"
+  },
+  {
+    "id": "kids-aerial-wellness",
+    "title": "Kids & Youth Aerial Yoga & Mindful Movement Batches",
+    "category": "Workshop",
+    "date": "Salem Studio",
+    "summary": "Playful, supervised aerial silk yoga and wellness sessions building flexibility, coordination, focus, and confidence.",
+    "image": "/images/hanging02.jpg",
+    "linkUrl": "/yoga-programs#kids-yoga",
+    "linkLabel": "Explore Kids Yoga",
+    "active": true,
+    "createdAt": "2026-11-17T06:00:00.000Z"
+  }
+]

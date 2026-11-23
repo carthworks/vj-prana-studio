@@ -99,6 +99,13 @@ The contact form submits to `POST /api/contact` with strict Zod validation:
 - Alternatively, when **`CONTACT_WEBHOOK_URL`** is configured, enquiries are forwarded as JSON to your webhook endpoint.
 - If neither environment variable is configured yet, the API honestly returns HTTP `503` (`NOT_CONFIGURED`)—never showing a fake success message—and the UI immediately provides pre-filled **WhatsApp** (`+91 97917 85007`) and **Email** (`mailto:hello@vjpranastudio.com`) buttons containing the visitor's validated enquiry details.
 
+### News & Events Ticker Admin Panel (`/admin/news`)
+
+- Visit `/admin/news` (or click the **Manage** lock button in the homepage ticker bar) to add, edit, reorder, hide, or delete news & events with images.
+- Set `NEWS_ADMIN_PASSWORD` in `.env.local` (and in Vercel Environment Variables before deploying). In local development only, if unset, the temporary default password is `vjprana2026`.
+- Locally and on Node servers, items persist in `data/news.json` and uploaded photos save to `public/images/news/`.
+- On serverless deployments (such as Vercel), add `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` (or Vercel KV) so updates persist across deployments.
+
 ## Build & Production Commands
 
 ```bash
