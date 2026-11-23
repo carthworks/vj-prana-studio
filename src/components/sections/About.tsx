@@ -7,9 +7,9 @@ import { FadeIn } from "@/components/ui/MotionPrimitives";
 
 export function About() {
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-white py-16 sm:py-22">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">
           {/* Editorial Photo Collage */}
           <div className="lg:col-span-6">
             <FadeIn>
@@ -60,15 +60,18 @@ export function About() {
 
               <div className="mt-6 space-y-4 text-base leading-relaxed text-[#676055]">
                 <p>
-                  VJ PRANA Health &amp; Wellness Studio is dedicated to helping
-                  individuals develop healthier lifestyles through yoga,
-                  fitness, nutrition and holistic wellness practices.
+                  At VJ PRANA, we educate people on the everyday importance of{" "}
+                  <strong className="font-semibold text-[#00052F]">
+                    movement, flexibility, and endurance
+                  </strong>
+                  —keeping wellness simple and practical so you can lead a
+                  happy, healthy lifestyle on a regular basis.
                 </p>
                 <p>
-                  Our approach focuses on individual needs, sustainable habits
-                  and mindful living. Whether you are beginning your wellness
-                  journey or looking to improve your existing routine, we aim to
-                  provide a welcoming environment for everyone.
+                  Every program is personalised around your individual needs,
+                  sustainable habits, and mindful living. Whether you are just
+                  beginning or deepening your routine, our Salem studio and
+                  weekday online classes offer a welcoming, supportive space.
                 </p>
               </div>
 
@@ -121,11 +124,11 @@ export function About() {
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <LinkButton href="/about" size="lg" variant="navy">
-                  <span>Meet Our Team &amp; Story</span>
+                  <span>Meet Our Team &amp; Gallery</span>
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </LinkButton>
-                <LinkButton href="/contact" size="lg" variant="outline">
-                  Visit Our Salem Studio
+                <LinkButton href="/special-programs" size="lg" variant="outline">
+                  Special Programs &amp; Counselling
                 </LinkButton>
               </div>
             </FadeIn>

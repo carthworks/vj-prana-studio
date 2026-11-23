@@ -13,7 +13,7 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="border-t border-[#E4DED4] bg-[#F5F0E6]/45 py-20 sm:py-28"
+      className="bg-white py-16 sm:py-22"
     >
       <FaqStructuredData />
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

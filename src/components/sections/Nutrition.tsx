@@ -9,7 +9,7 @@ export function Nutrition() {
   const consultant = TEAM_PROFILES.geetha;
 
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-white py-16 sm:py-22">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
           {/* Left Editorial Column */}
@@ -80,13 +80,13 @@ export function Nutrition() {
                 {/* Consultant Profile Card */}
                 <div className="rounded-3xl border border-[#E4DED4] bg-[#F5F0E6] p-6 sm:p-8">
                   <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-                    <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden rounded-2xl border border-[#E4DED4] bg-white sm:w-44">
+                    <div className="relative aspect-[4/4] w-40 shrink-0 overflow-hidden rounded-2xl border border-[#CCA146]/45 bg-[#00052F] shadow-xs sm:w-44">
                       <Image
-                        src="/images/nutricion.jpg"
-                        alt="Diet Consultation services by Geetha Arunkumar at VJ PRANA Health and Wellness Studio"
+                        src={consultant.image}
+                        alt={consultant.imageAlt}
                         fill
-                        sizes="(max-width: 640px) 100vw, 180px"
-                        className="object-contain p-1.5"
+                        sizes="(max-width: 640px) 160px, 180px"
+                        className="object-cover object-top"
                       />
                     </div>
 

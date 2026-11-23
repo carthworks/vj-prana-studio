@@ -111,13 +111,29 @@ export default function NutritionPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12">
             <div className="rounded-3xl border border-[#E4DED4] bg-white p-7 shadow-xs sm:p-10 lg:col-span-7">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#8C6A1F]">
-                <Award className="h-4 w-4 text-[#CF4520]" aria-hidden="true" />
-                Meet Your Nutrition Consultant
-              </span>
-              <h2 className="font-editorial mt-3 text-3xl font-medium text-[#00052F] sm:text-4xl">
-                {consultant.name}
-              </h2>
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border-2 border-[#CCA146]/50 bg-[#00052F] shadow-sm sm:h-32 sm:w-32">
+                  <Image
+                    src={consultant.image}
+                    alt={consultant.imageAlt}
+                    fill
+                    sizes="128px"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div>
+                  <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#8C6A1F]">
+                    <Award className="h-4 w-4 text-[#CF4520]" aria-hidden="true" />
+                    Meet Your Nutrition Consultant
+                  </span>
+                  <h2 className="font-editorial mt-2 text-3xl font-medium text-[#00052F] sm:text-4xl">
+                    {consultant.name}
+                  </h2>
+                  <p className="mt-1 text-sm text-[#676055]">
+                    {consultant.role}
+                  </p>
+                </div>
+              </div>
 
               <ul className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                 {consultant.credentials.map((cred) => (

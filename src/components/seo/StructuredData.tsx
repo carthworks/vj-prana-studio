@@ -23,7 +23,8 @@ export function StructuredData() {
         alternateName: BUSINESS.name,
         slogan: BUSINESS.tagline,
         description:
-          "Discover yoga, fitness, personalised nutrition, meditation, women's yoga, foot reflexology, and holistic wellness programs at VJ PRANA Health & Wellness Studio in Salem. Online and offline classes available.",
+          "Discover personalised yoga, movement, flexibility, endurance, nutrition, and holistic wellness programs at VJ PRANA Health & Wellness Studio in Salem. Weekday online classes (4:45 AM – 11:00 AM & 5:00 PM – 8:00 PM, 1 hr 15 min Mon–Fri, ₹3,000/month) and offline Salem studio sessions available.",
+        priceRange: "₹3,000/month",
         url: SITE_URL,
         logo: `${SITE_URL}/icon.svg`,
         image: [

@@ -415,6 +415,9 @@ export const TEAM_PROFILES = {
       "Delivered an expert lecture in the Five-Day Faculty Development Programme on 'Invest in Your Health' at VIT Vellore (May 2024).",
       "Leads customised diet planning, nutrition awareness programs, and women's wellness sessions online and in Salem.",
     ],
+    image: "/images/geetha-arunkumar.jpg",
+    imageAlt:
+      "Geetha Arunkumar – Ph.D., PGDFS (New Zealand), Dietician, Nutrition Consultant & AYUSH Certified Yoga Teacher at VJ PRANA Salem",
     certificateImage: "/images/vit-certification.jpg",
     certificateCaption:
       "Certificate of Appreciation from VIT Vellore (TLCE & School of CSE) for expert lecture on 'Invest in Your Health' (May 2024).",
@@ -689,16 +692,30 @@ export const GALLERY_ITEMS: GalleryAsset[] = [
   },
 ];
 
+export const CLASS_SCHEDULE = {
+  morningSlots: "4:45 AM – 11:00 AM",
+  eveningSlots: "5:00 PM – 8:00 PM",
+  duration: "1 hr 15 min daily",
+  days: "Monday – Friday (No weekend classes)",
+  monthlyFee: "₹3,000 / month",
+  formatNote: "Personalised weekday programs tailored to your pace and goals.",
+} as const;
+
 export const FAQ_ITEMS = [
   {
     question: "Do you offer online and offline yoga classes?",
     answer:
-      "Yes. VJ PRANA offers both in-person studio sessions at our Salem wellness studio and live, instructor-guided online classes (including via Zoom) so you can practice comfortably from anywhere.",
+      "Yes. VJ PRANA offers both live personalised online classes (Morning: 4:45 AM – 11:00 AM, Evening: 5:00 PM – 8:00 PM) and in-person studio sessions in Sastha Nagar, Salem.",
+  },
+  {
+    question: "What are the online class timings, duration, and monthly fee?",
+    answer:
+      "Online personalised programs run Monday to Friday (no weekend classes), with flexible slots between 4:45 AM – 11:00 AM in the morning and 5:00 PM – 8:00 PM in the evening. Each daily session lasts 1 hour 15 minutes, and the fee is ₹3,000 per month.",
   },
   {
     question: "Are classes suitable for beginners?",
     answer:
-      "Absolutely. Every program is thoughtfully adapted to your current flexibility, strength, and experience level. Our instructors guide beginners step by step in a calm, supportive environment.",
+      "Absolutely. Every program is personalised to your current mobility, flexibility, endurance, and experience level. We keep practices simple and sustainable so you can build a happy lifestyle on a regular basis.",
   },
   {
     question: "Do you provide yoga programs for children?",
@@ -721,14 +738,9 @@ export const FAQ_ITEMS = [
       "Yes. Geetha Arunkumar (Ph.D., PGDFS New Zealand), our Dietician & Nutrition Consultant, offers one-on-one online and offline nutrition consultations to craft practical, personalised diet plans aligned with your lifestyle and goals.",
   },
   {
-    question: "How do I book a consultation?",
+    question: "How do I book a consultation & where is VJ PRANA located?",
     answer:
-      "You can book a free initial consultation or enquire about batch timings by filling out the enquiry form on our Contact page, messaging us directly on WhatsApp (+91 97917 85007), or calling 097917 85007 / 97902 38264.",
-  },
-  {
-    question: "Where is VJ PRANA located?",
-    answer:
-      "Our studio is located at Sastha Nagar, Near Iyyapan Koil, Bangalore Bypass Road, Salem, Tamil Nadu, India – 636005. You can open directions directly from our Contact section.",
+      "You can book a free initial consultation using the form on our Contact page, on WhatsApp (+91 97917 85007), or by calling 097917 85007 / 97902 38264. Our studio is located at Sastha Nagar, Near Iyyapan Koil, Bangalore Bypass Road, Salem, Tamil Nadu – 636005.",
   },
 ] as const;
 

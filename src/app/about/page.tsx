@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { LinkButton } from "@/components/ui/Button";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ModesSection } from "@/components/sections/ModesSection";
+import { Gallery } from "@/components/sections/Gallery";
 
 export const metadata: Metadata = {
   title: "About Us – Holistic Yoga & Wellness Studio in Salem",
@@ -46,15 +47,20 @@ export default function AboutPage() {
               />
               <div className="mt-6 space-y-4 text-base leading-relaxed text-[#676055]">
                 <p>
-                  VJ PRANA Health &amp; Wellness Studio is dedicated to helping
-                  individuals develop healthier lifestyles through yoga,
-                  fitness, nutrition and holistic wellness practices.
+                  At VJ PRANA Health &amp; Wellness Studio, we focus on
+                  educating people about the everyday importance of{" "}
+                  <strong className="font-semibold text-[#00052F]">
+                    movement, flexibility, and endurance
+                  </strong>
+                  —making it simple and enjoyable to lead a happy, healthy
+                  lifestyle on a regular basis.
                 </p>
                 <p>
-                  Our approach focuses on individual needs, sustainable habits
-                  and mindful living. Whether you are beginning your wellness
-                  journey or looking to improve your existing routine, we aim to
-                  provide a welcoming environment for everyone.
+                  Our personalised programs focus on individual needs,
+                  sustainable habits, and mindful living. Whether you join our
+                  live weekday online batches (1 hr 15 min daily, Monday to
+                  Friday) or visit our studio in Salem, we provide a welcoming
+                  environment for every age and body.
                 </p>
                 <p>
                   Rather than one-size-fits-all workouts or short-lived diet
@@ -148,13 +154,13 @@ export default function AboutPage() {
 
             {/* Geetha Arunkumar */}
             <article className="flex flex-col overflow-hidden rounded-3xl border border-[#E4DED4] bg-white shadow-xs">
-              <div className="relative aspect-[16/10] w-full bg-[#F5F0E6]">
+              <div className="relative aspect-[16/10] w-full bg-[#00052F]">
                 <Image
-                  src={geetha.certificateImage}
-                  alt={geetha.certificateCaption}
+                  src={geetha.image}
+                  alt={geetha.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-contain p-4"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="flex flex-1 flex-col p-7 sm:p-9">
@@ -256,6 +262,7 @@ export default function AboutPage() {
       </section>
 
       <WhyChooseUs />
+      <Gallery />
       <ModesSection />
 
       <section className="bg-white py-16 text-center">

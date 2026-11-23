@@ -5,7 +5,7 @@ import { HeroSlider } from "./HeroSlider";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#F5F0E6] via-[#F5F0E6]/65 to-white pt-10 pb-20 sm:pt-16 sm:pb-28">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#F5F0E6] via-[#F5F0E6]/65 to-white pt-8 pb-16 sm:pt-14 sm:pb-24">
       {/* Subtle organic background shapes */}
       <div
         className="organic-shape pointer-events-none absolute -top-24 right-[-6rem] h-[28rem] w-[28rem] bg-[#DBD4C6]/45 blur-3xl"
@@ -30,14 +30,14 @@ export function Hero() {
                 Discover a Healthier, Stronger &amp; More Balanced You.
               </h1>
 
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-[#676055] sm:text-lg">
-                At VJ PRANA, we believe wellness is a journey, not a
-                destination. Discover the power of yoga, mindful movement,
-                personalised nutrition and holistic wellness programs designed
-                for every stage of life.
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-[#676055] sm:text-lg">
+                At VJ PRANA, we educate you on the simple, everyday power of
+                movement, flexibility, and endurance—combining personalised
+                yoga, mindful fitness, and nutrition to help you lead a happy,
+                healthy lifestyle on a regular basis.
               </p>
 
-              <div className="mt-9 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-4">
                 <LinkButton href="#programs" size="lg" variant="primary">
                   <span>Explore Our Programs</span>
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -48,14 +48,14 @@ export function Hero() {
                 </LinkButton>
               </div>
 
-              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#28231E]">
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-[#28231E]">
                 <span className="inline-flex items-center gap-2 font-medium">
                   <Globe className="h-4 w-4 text-[#CF4520]" aria-hidden="true" />
-                  Online &amp; Offline Classes Available.
+                  Online (4:45–11 AM &amp; 5–8 PM) &middot; Mon–Fri &middot; ₹3,000/mo
                 </span>
                 <span className="inline-flex items-center gap-2 text-[#676055]">
                   <MapPin className="h-4 w-4 text-[#CCA146]" aria-hidden="true" />
-                  Sastha Nagar, Salem &middot; Live Zoom Sessions
+                  Offline Studio in Salem
                 </span>
               </div>
             </FadeIn>

@@ -25,7 +25,7 @@ export function VideoShowcase() {
   return (
     <section
       id="videos"
-      className="border-b border-[#E4DED4] bg-white py-20 sm:py-28"
+      className="border-y border-[#E4DED4] bg-[#F5F0E6]/45 py-16 sm:py-22"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading

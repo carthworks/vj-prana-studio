@@ -7,7 +7,7 @@ export function Programs() {
   return (
     <section
       id="programs"
-      className="border-y border-[#E4DED4] bg-[#F5F0E6]/60 py-20 sm:py-28"
+      className="border-y border-[#E4DED4] bg-[#F5F0E6]/60 py-16 sm:py-22"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
