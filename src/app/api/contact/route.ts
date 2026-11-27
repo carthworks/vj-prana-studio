@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
 import { contactFormSchema } from "@/lib/validation";
 import { BUSINESS } from "@/lib/constants";
+import {
+  extractClientIp,
+  isIpExcluded,
+  parseUserAgent,
+  recordAnalyticsEvent,
+} from "@/lib/analyticsStore";
 
 export async function POST(request: Request) {
   let payload: unknown;
@@ -26,6 +32,26 @@ export async function POST(request: Request) {
   }
 
   const data = parsed.data;
+  const host = request.headers.get("host");
+  const clientIp = extractClientIp(request.headers);
+  if (!(await isIpExcluded(clientIp, host))) {
+    const ua = request.headers.get("user-agent") ?? "";
+    const { device, browser, os } = parseUserAgent(ua);
+    void recordAnalyticsEvent({
+      type: "contact_submit",
+      path: "/contact",
+      visitorId: "server_enquiry",
+      sessionId: "server_enquiry",
+      device,
+      browser,
+      os,
+      country: request.headers.get("x-vercel-ip-country") ?? undefined,
+      label: `${data.program} (${data.preferredMode})`,
+      leadFrom: `Contact Form · ${data.program}`,
+      ip: clientIp ?? undefined,
+    }).catch(() => {});
+  }
+
   const resendApiKey = process.env.RESEND_API_KEY?.trim();
   const webhookUrl = process.env.CONTACT_WEBHOOK_URL?.trim();
 

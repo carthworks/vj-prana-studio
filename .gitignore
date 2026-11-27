@@ -37,6 +37,8 @@ yarn-error.log*
 # client working reference files (not part of production repository)
 /photos-reference/
 /prompt.txt
+/data/analytics.json
+/data/analytics-config.json
 
 # OS & editor files
 .DS_Store
